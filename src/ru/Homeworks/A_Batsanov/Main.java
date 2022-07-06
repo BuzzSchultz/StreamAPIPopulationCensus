@@ -30,8 +30,8 @@ public class Main {
                 .filter(Person -> Person.getSex().equals(Sex.MAN) && Person.getAge() >= 18 && Person.getAge() <= 27)
                 .map(Person::getFamily)
                 .collect(Collectors.toList());
-//        conscripts.forEach(System.out::println);
-//        delimeter();
+        conscripts.forEach(System.out::println);
+        delimeter();
         List<Person> workable = persons.stream()
                 .filter(Person -> Person.getEducation().equals(Education.HIGHER))
                 .filter(Person -> Person.getAge() >= 18 && Person.getAge() <= 65)
@@ -39,7 +39,7 @@ public class Main {
                         Person.getSex().equals(Sex.WOMAN) && Person.getAge() <= 60)
                 .sorted(Comparator.comparing(Person::getFamily))
                 .collect(Collectors.toList());
-//        workable.forEach(System.out::println);
-//        delimeter();
+        workable.forEach(System.out::println);
+        delimeter();
     }
 }
